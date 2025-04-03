@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kristine Love Balao</title>
+    <style>
+        body {
+            background-color: #e6ccff;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .heart {
+            font-size: 50px;
+            color: red;
+            animation: heartbeat 1s infinite;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        .question {
+            font-size: 24px;
+            color: #5a009d;
+            margin: 20px;
+        }
+        .form-container {
+            margin-top: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        .form-container input, select {
+            font-size: 16px;
+            margin: 10px;
+            padding: 5px;
+            width: 80%;
+        }
+        .click-button {
+            background-color: #a855f7;
+            color: white;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .flower-img {
+            position: absolute;
+            width: 50px;
+            height: auto;
+            animation: float 4s ease-in-out infinite;
+        }
+        .sorry-text {
+            position: absolute;
+            font-size: 30px;
+            color: #ff4d94;
+            font-weight: bold;
+            animation: floatText 4s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-150px); }
+            100% { transform: translateY(0); }
+        }
+        @keyframes floatText {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-200px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <audio autoplay loop>
+        <source src="unti.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="container">
+        <div class="heart">❤️</div>
+        <div class="question">Sorry tine, na g-guilty ako tuwing naririnig ko na kinakausap mo si Yvette pero hindi ka nakakatanggap ng response. Hindi ko rin kaya na hindi na tayo nagpapansinan nakakapanibago, nasanay kasi ako na ikaw yung kaasaran ko since grade 12. Gustong gusto ko humingi ng pasensiya sayo dahil sa nangyari, pero kahit ganon hindi ko rin pinagsisihan yung nagawa ko. Dahil nagkaroon pala ako ng chance na ayain ka mag unwind para malabas mo rin problem mo sa school at sa bahay niyo, na sana mas pinagaan ko pa yung loob mo imbes bigyan ng sama ng loob. Alam kong hindi ganon kadali na patawarin ako dahil sa nagawa ko, nahihiya na ako sayo tine nakaka awkward na nakikita at nakakasama kita sa isang place pero hindi tayo nag uusap, hayaan mo sana akong makabawi sayo.</div>
+        <div class="question">Pwede ba kitang puntahan? kung kailan ka free at pwedeng makausap</div>
+        <div class="form-container">
+            <h3>Fill up the details and screenshot before sending:</h3>
+            <label for="date">Date:</label>
+            <input type="date" id="date"><br>
+            <label for="time">Time:</label>
+            <input type="time" id="time"><br>
+            <label for="place">Choose a place:</label>
+            <select id="place">
+                <option value="Kanwaling Farm">Kanwaling Farm</option>
+                <option value="Bahay">Bahay</option>
+                <option value="Other">Other (Specify Below)</option>
+            </select><br>
+            <input type="text" id="customPlace" placeholder="Enter other place" style="display:none;"><br>
+        </div>
+        <p><strong>Reminder:</strong> Please take a screenshot after filling up the form and send it.</p>
+        <button class="click-button" onclick="showFlowers()">Click this non-stop</button>
+        <button class="click-button" onclick="showSorryText()">Click this non-stop</button>
+    </div>
+    <script>
+        function showFlowers() {
+            for (let i = 0; i < 10; i++) {
+                let flower = document.createElement('img');
+                flower.src = "images.jpeg";
+                flower.classList.add('flower-img');
+                flower.style.left = Math.random() * window.innerWidth + 'px';
+                flower.style.top = Math.random() * window.innerHeight + 'px';
+                document.body.appendChild(flower);
+                setTimeout(() => { flower.remove(); }, 4000);
+            }
+        }
+        function showSorryText() {
+            for (let i = 0; i < 10; i++) {
+                let sorryText = document.createElement('div');
+                sorryText.classList.add('sorry-text');
+                sorryText.innerHTML = "SORRY BFF ❤️";
+                sorryText.style.left = Math.random() * window.innerWidth + 'px';
+                sorryText.style.top = Math.random() * window.innerHeight + 'px';
+                document.body.appendChild(sorryText);
+                setTimeout(() => { sorryText.remove(); }, 4000);
+            }
+        }
+        document.getElementById("place").addEventListener("change", function() {
+            let customPlace = document.getElementById("customPlace");
+            if (this.value === "Other") {
+                customPlace.style.display = "block";
+            } else {
+                customPlace.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
