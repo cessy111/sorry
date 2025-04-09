@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Paula</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Pacifico', cursive;
+            background-color: #f0e6f6;
+            text-align: center;
+            padding: 50px;
+            overflow: hidden; /* Prevent scrollbars from appearing */
+        }
+        .greeting-card {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            padding: 30px;
+            max-width: 600px;
+            margin: auto;
+            animation: fadeIn 2s ease-in-out;
+            position: relative; /* Position relative for absolute children */
+        }
+        .greeting-card img {
+            width: 100%;
+            border-radius: 15px;
+            animation: zoomIn 2s ease-in-out;
+        }
+        .greeting-card h1 {
+            color: #d63384;
+            font-size: 3em;
+            margin: 20px 0;
+            animation: slideIn 2s ease-in-out;
+        }
+        .greeting-card p {
+            color: #555;
+            font-size: 1.2em;
+            animation: slideIn 2s ease-in-out;
+        }
+        .greeting-card .icon {
+            color: #d63384;
+            font-size: 2em;
+            margin-top: 20px;
+            animation: bounce 2s infinite;
+        }
+        .floating-tulip {
+            position: absolute;
+            width: 50px; /* Adjust size as needed */
+            animation: float 5s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0); }
+            to { transform: scale(1); }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-50px); }
+            to { transform: translateY(0); }
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-30px); }
+            60% { transform: translateY(-15px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="greeting-card">
+        <img alt= height="400" src="paula.jpg" width="600"/>
+        <h1>Happy Birthday!</h1>
+        <p>Wishing you a day filled with love, joy, and beautiful moments. Kaya mag unwind na tayo kahit saan kahit walang pera basta kung saan nakakahinga doon tayo. Happy birthday Paula ko! Iloveyou! Mwah💋</p>
+        <div class="icon">
+            <i class="fas fa-birthday-cake"></i>
+        </div>
+    </div>
+    <audio autoplay="">
+        <source src="better.mp3" type="audio/mpeg"/>
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Floating Tulips -->
+    <img class="floating-tulip" src="pa.jpg" style="top: 10%; left: 10%;" alt="Floating Tulip"/>
+    <img class="floating-tulip" src="pau.jpg" style="top: 20%; right: 15%;" alt="Floating Tulip"/>
+    <img class="floating-tulip" src="pj.jpg" style="top: 30%; left: 20%;" alt="Floating Tulip"/>
+    <img class="floating-tulip" src="pp.jpg" style="top: 40%; right: 20%;" alt="Floating Tulip"/>
+    
+    <img class="floating-tulip" src="tu.png" style="top: 2%; left: 5%;" alt="Floating Tulip"/>
+
+    <img class="floating-tulip" src="tu.png" style="top: 10%; right: 25%;" alt="Floating Tulip"/>
+
+    <img class="floating-tulip" src="tu.png" style="top: 15%; left: 25%;" alt="Floating Tulip"/>
+
+    <img class="floating-tulip" src="tu.png" style="top: 5%; right: 3%;" alt="Floating Tulip"/>
+
+    <img class="floating-tulip" src="tu.png" style="top: 30%; left: 4%;" alt="Floating Tulip"/>
+
+    <img class="floating-tulip" src="tu.png" style="top: 30%; right: 25%;" alt="Floating Tulip"/>
+
+    <img class="floating-tulip" src="tu.png" style="top: 45%; left: 10%;" alt="Floating Tulip"/>
+
+    <img class="floating-tulip" src="tu.png" style="top: 50%; right: 15%;" alt="Floating Tulip"/>
+
+
+</body>
+</html>
